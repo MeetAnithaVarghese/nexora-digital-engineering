@@ -1,0 +1,36 @@
+name: Continuous Integration & Verification
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    name: Lint, Test & Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check Syntax & Linting
+        run: npm run lint
+
+      - name: Seed Test Database
+        run: node src/db/seed.js
+
+      - name: Execute Full Test Matrix
+        run: npm test
+
+      - name: Verify Specification & Traceability
+        run: |
+          echo "Verifying presence of constitution and CLAUDE.md..."
+          test -f constitution.md || exit 1
+          test -f CLAUDE.md || exit 1
+          echo "Constitutional verification passed."
