@@ -20,3 +20,4 @@ test('Integration: searchEntities finds services, case studies, and articles', (
   const shortSearch = searchEntities('a');
   assert.equal(shortSearch.total, 0);
 });
+

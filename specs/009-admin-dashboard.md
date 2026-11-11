@@ -13,3 +13,4 @@ Provide internal consulting managers and editors with a fast, secure portal to i
 - **FR-9.2 Leads Table:** Sortable list of submissions with filter by status.
 - **FR-9.3 Content Management Table:** Create/edit draft articles, transition status to published.
 - **FR-9.4 Session Logout:** Invalidate session token on server and clear client cookie.
+

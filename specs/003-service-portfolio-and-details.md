@@ -19,3 +19,4 @@ Enterprise clients evaluate tech partners on depth of expertise. Nexora requires
 ## 3. Acceptance Scenarios
 - **Scenario 1:** Given a visitor visits `/services`, Then all 6 service domain cards are rendered with summaries and links.
 - **Scenario 2:** Given a visitor clicks on a service card (e.g. `/services/ai-data-engineering`), Then the dedicated page loads with full architecture deliverables, toolchain list, and an enquiry button pre-selecting that service.
+

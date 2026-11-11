@@ -18,3 +18,4 @@ Use this skill when processing a new GitHub Issue or Jira ticket.
    - Security / Authorization implications
    - Performance / Scalability implications
 5. Formulate clarification questions for any ambiguous requirement.
+

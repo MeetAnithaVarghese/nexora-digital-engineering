@@ -28,3 +28,4 @@ If you discover a security vulnerability in the Nexora platform, please report i
 3. **Password Security:** All passwords must be salted and hashed using PBKDF2 with at least 100,000 iterations. Plaintext passwords must never touch logs or persistent storage.
 4. **Session Protection:** Session identifiers must be cryptographically random (at least 32 bytes from `crypto.randomBytes`) and transmitted with `HttpOnly`, `SameSite=Strict`, and `Secure` attributes.
 5. **No Hardcoded Secrets:** Any API keys, secrets, or administrative passwords found committed to git will trigger an immediate mandatory credential rotation and git history scrub.
+

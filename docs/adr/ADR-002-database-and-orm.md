@@ -15,3 +15,4 @@ Chosen option: **Direct Parameterized SQL via Data Access Repository Pattern**.
 - Heavyweight ORMs introduce runtime overhead, query generation opacity, and large dependency vulnerability trees.
 - Parameterized SQL is universally readable by human engineers and AI code review agents without hidden ORM abstraction leaks.
 - Full compliance with `constitution.md` Section 6 (100% prepared statements, zero string interpolation).
+

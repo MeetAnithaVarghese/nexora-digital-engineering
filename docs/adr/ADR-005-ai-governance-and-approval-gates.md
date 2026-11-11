@@ -18,3 +18,4 @@ Chosen option: **Four Mandatory Human Approval Gates with Isolated Agent Roles**
 4. **Gate 4: Release Authorization:** Human triggers production deployment.
 
 Agents operate under immutable constitutional constraints defined in `constitution.md`.
+

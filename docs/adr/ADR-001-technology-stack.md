@@ -30,3 +30,4 @@ Chosen option: **Option B (Modern Node.js + Native SQLite + Semantic Design Toke
 
 ### Negative Consequences
 - Write concurrency is limited by SQLite file lock (sufficient for B2B consulting web traffic of < 10,000 writes/minute).
+

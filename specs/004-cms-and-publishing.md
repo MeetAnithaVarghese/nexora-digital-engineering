@@ -17,3 +17,4 @@ Nexora publishes insights, technical articles, and case studies to demonstrate d
 ## 3. Acceptance Scenarios
 - **Scenario 1:** Given an article with status `draft`, When a public visitor requests `/api/articles`, Then the draft article is omitted from results.
 - **Scenario 2:** Given an admin logged into `/admin`, When they approve an article to `published`, Then the article immediately appears in `/insights` and `/sitemap.xml`.
+

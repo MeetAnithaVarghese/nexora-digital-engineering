@@ -34,3 +34,4 @@ jobs:
           test -f constitution.md || exit 1
           test -f CLAUDE.md || exit 1
           echo "Constitutional verification passed."
+

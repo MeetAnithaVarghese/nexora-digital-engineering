@@ -27,3 +27,4 @@ test('SEO: Organization JSON-LD is valid and contains expected entity attributes
   assert.equal(parsed.name, 'Nexora Digital Engineering');
   assert.ok(Array.isArray(parsed.knowsAbout));
 });
+

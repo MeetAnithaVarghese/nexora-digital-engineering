@@ -19,3 +19,4 @@ Understand visitor engagement, conversion bottlenecks, and content effectiveness
 ## 3. Privacy & Consent
 - Zero PII (Personally Identifiable Information) in telemetry payloads.
 - Anonymized IP addresses for compliance with GDPR.
+

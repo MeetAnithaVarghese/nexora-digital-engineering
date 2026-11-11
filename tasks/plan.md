@@ -24,3 +24,4 @@ Before coding, the AI agent performs cross-specification validation:
 1. Verify that database column lengths match form field validation constraints.
 2. Verify that service slugs in `specs/003` match route definitions in `specs/001`.
 3. Verify that role permissions in `specs/005` match API route access in `specs/009`.
+

@@ -22,3 +22,4 @@ Administrative functions (viewing proprietary enterprise leads, managing publish
 - **Scenario 1 (Valid Login):** Given valid admin credentials, When `POST /api/auth/login` is called, Then HTTP 200 is returned with a `Set-Cookie` session header.
 - **Scenario 2 (Unauthorized Access):** Given an unauthenticated visitor, When `GET /api/admin/leads` is requested, Then HTTP 401 Unauthorized is returned.
 - **Scenario 3 (Role Escalation Prevention):** Given a user with role `editor`, When they attempt to delete a user account or access `/api/admin/leads`, Then HTTP 403 Forbidden is returned.
+

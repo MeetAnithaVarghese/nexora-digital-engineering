@@ -10,3 +10,4 @@ Use this skill when closing a ticket or preparing a pull request.
 1. Update `CHANGELOG.md` under `[Unreleased]` or target version.
 2. Update API documentation if routes or payloads changed.
 3. Update `README.md` if setup or environment variables changed.
+

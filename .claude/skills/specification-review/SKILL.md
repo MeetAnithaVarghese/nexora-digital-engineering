@@ -12,3 +12,4 @@ Use this skill to audit specifications in `specs/`.
 - Are edge cases (null values, timeouts, duplicate requests) addressed?
 - Are security and privacy constraints explicitly declared?
 - Does it align with `constitution.md`?
+

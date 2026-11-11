@@ -15,3 +15,4 @@ test('Integration: draft articles are excluded from public published queries', (
   const anyDraftInPublished = publishedArticles.some(a => a.status === 'draft');
   assert.equal(anyDraftInPublished, false, 'Draft articles must never be returned in published query');
 });
+

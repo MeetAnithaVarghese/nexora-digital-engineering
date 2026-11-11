@@ -31,3 +31,4 @@ An emergency rollback can be initiated by the Engineering Lead or On-Call Incide
    curl -I http://localhost:3000/api/health
    ```
 6. **Notify Stakeholders:** Broadcast status update to `#incident-room`.
+

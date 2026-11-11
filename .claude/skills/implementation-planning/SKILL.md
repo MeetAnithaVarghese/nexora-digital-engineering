@@ -11,3 +11,4 @@ Use this skill after a specification is approved to generate `plan.md` and `task
 2. Assign unique Task IDs (`NEX-00X`).
 3. Define dependencies, affected files, test requirements, and complexity.
 4. Present implementation plan to human engineering lead for Gate 2 approval.
+

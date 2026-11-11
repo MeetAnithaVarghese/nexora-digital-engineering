@@ -18,3 +18,4 @@ The contact form is Nexora's primary conversion pipeline. Every submission repre
 - **Scenario 1 (Valid Submission):** When valid contact data is posted to `POST /api/leads`, Then HTTP 201 Created is returned with `{ success: true, leadId: ... }`.
 - **Scenario 2 (Invalid Email):** When an invalid email (e.g., `notanemail`) is posted, Then HTTP 400 Bad Request is returned with code `INVALID_EMAIL`.
 - **Scenario 3 (Adversarial Rapid Submission):** When 6 rapid submissions are made from the same IP within 1 minute, Then the 6th returns HTTP 429 Too Many Requests.
+

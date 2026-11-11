@@ -22,3 +22,4 @@ Outline the primary happy path.
 
 ### 5. Architectural & Security Considerations
 Any data model, authorization, or third-party integration impacts?
+

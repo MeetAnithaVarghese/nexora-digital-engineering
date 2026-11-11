@@ -21,3 +21,4 @@ Chosen option: **Stateful Server-Side Sessions with HTTP-Only Cookies**.
 - `visitor`: Read public content, submit lead enquiries, search.
 - `editor`: Create and edit draft content; submit for publishing review.
 - `admin`: Publish/archive content, view lead submissions, manage administrative users.
+

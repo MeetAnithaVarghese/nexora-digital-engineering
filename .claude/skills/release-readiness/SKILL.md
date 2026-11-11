@@ -11,3 +11,4 @@ Use this skill prior to requesting Gate 4 production release authorization.
 2. Ensure database snapshot backup procedure is documented.
 3. Validate rollback runbook (`docs/runbooks/rollback.md`).
 4. Generate release notes from `CHANGELOG.md`.
+

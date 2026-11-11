@@ -17,3 +17,4 @@ Maximize organic enterprise visibility across traditional search engines (Google
   - Insights / Articles: `TechArticle` schema with author, datePublished, and headline.
   - FAQ Sections: `FAQPage` schema with questions and exact answers.
 - **FR-7.4 Canonical URLs:** Explicit `<link rel="canonical" href="...">` on all renderable pages.
+

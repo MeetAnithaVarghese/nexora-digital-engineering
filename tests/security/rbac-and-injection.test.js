@@ -52,3 +52,4 @@ test('Security: editor role session cannot claim admin privileges', () => {
   assert.equal(validated.role, 'editor');
   assert.notEqual(validated.role, 'admin');
 });
+

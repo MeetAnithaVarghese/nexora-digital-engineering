@@ -126,3 +126,4 @@ A task is Done when:
   - AI agents must NEVER fabricate testimonials, customer data, or security certifications.
   - AI agents must NEVER bypass failing tests or modify test assertions to force a passing build.
   - AI agents must NEVER merge pull requests without explicit human sign-off.
+

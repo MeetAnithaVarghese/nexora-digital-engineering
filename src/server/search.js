@@ -51,3 +51,4 @@ function searchEntities(rawQuery) {
 module.exports = {
   searchEntities
 };
+

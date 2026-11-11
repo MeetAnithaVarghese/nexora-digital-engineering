@@ -39,3 +39,4 @@ test('Integration: updateLeadStatus transitions lead to qualified', () => {
   const found = updatedLeads.find(l => l.id === targetLead.id);
   assert.equal(found.status, 'qualified');
 });
+

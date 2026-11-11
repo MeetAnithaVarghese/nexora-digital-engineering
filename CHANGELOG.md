@@ -16,3 +16,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Search Capability:** High-performance multi-entity search indexing services, articles, and case studies.
 - **SEO / AEO / GEO Engine:** Automated XML sitemap generation (`/sitemap.xml`), robots exclusion standard (`/robots.txt`), and schema.org JSON-LD structured data.
 - **Testing Suites:** Complete automated test suite covering unit validation, API integration, RBAC security, and adversarial edge cases with 100% test execution pass rate.
+

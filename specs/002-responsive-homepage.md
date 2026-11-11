@@ -23,3 +23,4 @@ The homepage is the primary entry point for enterprise buyers, prospective partn
 - Contrast ratio ≥ 4.5:1 across all typography.
 - Breakpoints at 640px, 768px, 1024px, 1280px.
 - Zero horizontal layout shift (CLS < 0.05).
+

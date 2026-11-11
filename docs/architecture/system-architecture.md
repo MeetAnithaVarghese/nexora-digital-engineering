@@ -68,3 +68,4 @@ The application runs as a modular single-process Node.js runtime:
 - **`articles`**: `id`, `slug`, `title`, `category`, `summary`, `body_markdown`, `author`, `status`, `view_count`, `published_at`
 - **`leads`**: `id`, `full_name`, `email`, `company`, `service_interest`, `message`, `status`, `created_at`
 - **`audit_logs`**: `id`, `user_id`, `action`, `entity_type`, `entity_id`, `details`, `created_at`
+

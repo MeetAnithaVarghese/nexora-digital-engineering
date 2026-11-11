@@ -16,3 +16,4 @@ Chosen option: **Three-State State Machine (`draft` -> `under_review` -> `publis
 2. `under_review`: Content submitted for human review. Verifies factual claims, client attributions, and SEO metadata.
 3. `published`: Approved by an administrator. Included in public searches, RSS, and `sitemap.xml`.
 4. `archived`: Retired content retained for historical audit trails with 301 redirect or 410 Gone status.
+

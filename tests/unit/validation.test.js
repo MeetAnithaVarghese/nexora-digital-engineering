@@ -63,3 +63,4 @@ test('Validation: sanitize search query strips illegal characters', () => {
   const clean = sanitizeSearchQuery(dirty);
   assert.equal(clean, 'SELECT  FROM users -- script');
 });
+

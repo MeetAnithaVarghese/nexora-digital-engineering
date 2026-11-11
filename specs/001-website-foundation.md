@@ -30,3 +30,4 @@ Nexora Digital Engineering requires a resilient, zero-overhead technical foundat
 ## 6. Security Considerations
 - Parameterized queries only.
 - Strict payload size limits (1MB max on JSON body).
+

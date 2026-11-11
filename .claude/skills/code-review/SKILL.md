@@ -12,3 +12,4 @@ Use this skill to evaluate modified code prior to human PR review.
 3. Verify that new routes include input validation schemas.
 4. Verify that new features include corresponding automated tests.
 5. Generate findings by severity: `CRITICAL`, `MAJOR`, `MINOR`, `INFO`.
+

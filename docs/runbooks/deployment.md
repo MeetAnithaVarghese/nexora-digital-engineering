@@ -38,3 +38,4 @@
    curl -I http://localhost:3000/api/health
    # Expected: HTTP/1.1 200 OK
    ```
+

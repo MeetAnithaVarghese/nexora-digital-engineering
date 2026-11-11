@@ -18,3 +18,4 @@ test('Auth: PBKDF2 hashing generates unique salt and verifies correctly', () => 
   // Rejects wrong password
   assert.equal(verifyPassword('WrongPassword', auth1.hash, auth1.salt), false);
 });
+

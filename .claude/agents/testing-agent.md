@@ -18,3 +18,4 @@ You must NEVER state that tests passed unless you executed them and received a z
 2. **Integration Tests:** HTTP route handling, SQLite database queries and transactions.
 3. **Security Tests:** RBAC route guards, unauthenticated rejections, injection defense.
 4. **Adversarial Tests:** Boundary values, extreme string lengths, malformed JSON, rapid submissions.
+
