@@ -1,9 +1,15 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { getDb } = require('../../src/db');
+const { getDb, resetDbForTesting } = require('../../src/db');
+const { seedDatabase } = require('../../src/db/seed');
 const { createLead } = require('../../src/server/lead');
 const { searchEntities } = require('../../src/server/search');
 const { validateSession, createSession } = require('../../src/server/auth');
+
+test.before(() => {
+  resetDbForTesting(':memory:');
+  seedDatabase();
+});
 
 test('Security: SQL injection payload in lead submission is safely parameterized', () => {
   const db = getDb();

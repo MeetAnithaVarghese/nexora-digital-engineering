@@ -1,7 +1,13 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { generateSitemapXml, generateRobotsTxt, getOrganizationJsonLd } = require('../../src/server/seo');
-const { getDb } = require('../../src/db');
+const { getDb, resetDbForTesting } = require('../../src/db');
+const { seedDatabase } = require('../../src/db/seed');
+
+test.before(() => {
+  resetDbForTesting(':memory:');
+  seedDatabase();
+});
 
 test('SEO: sitemap generates valid XML structure with public routes', () => {
   getDb();

@@ -1,10 +1,16 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { getDb } = require('../../src/db');
+const { getDb, resetDbForTesting } = require('../../src/db');
+const { seedDatabase } = require('../../src/db/seed');
+
+test.before(() => {
+  resetDbForTesting(':memory:');
+  seedDatabase();
+});
 
 test('Integration: draft articles are excluded from public published queries', () => {
   const db = getDb();
-  
+
   // Query all articles
   const allArticles = db.prepare('SELECT * FROM articles').all();
   const hasDraft = allArticles.some(a => a.status === 'draft');

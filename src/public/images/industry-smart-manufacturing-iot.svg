@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-labelledby="indMfgTitle indMfgDesc">
+  <title id="indMfgTitle">Smart Manufacturing &amp; Industrial IoT Architecture</title>
+  <desc id="indMfgDesc">OPC-UA industrial telemetry mesh, real-time edge inferencing, predictive maintenance machine models, and SCADA air-gap defense.</desc>
+  <defs>
+    <linearGradient id="indMfgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="indMfgShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="320" rx="10" fill="url(#indMfgBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <rect x="140" y="14" width="320" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="30" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    SMART MANUFACTURING &amp; INDUSTRIAL IoT TOPOLOGY
+  </text>
+
+  <!-- Industrial Edge Ingestion -->
+  <g filter="url(#indMfgShadow)">
+    <rect x="25" y="65" width="125" height="225" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="25" y="65" width="125" height="4" rx="2" fill="#0052CC"/>
+    <text x="87" y="90" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">FACTORY SENSORS</text>
+
+    <rect x="35" y="105" width="105" height="40" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="87" y="122" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">OPC-UA / MQTT</text>
+    <text x="87" y="136" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Industrial Bus Mesh</text>
+
+    <rect x="35" y="155" width="105" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="87" y="172" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">SCADA Air-Gap</text>
+    <text x="87" y="186" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Unidirectional Data Diode</text>
+
+    <rect x="35" y="205" width="105" height="40" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="87" y="222" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">100k Signals / sec</text>
+    <text x="87" y="236" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">Microsecond Jitter</text>
+  </g>
+
+  <path d="M 150 175 L 185 175" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Edge Compute & Prediction Engine -->
+  <g filter="url(#indMfgShadow)">
+    <rect x="185" y="55" width="230" height="245" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="185" y="55" width="230" height="28" rx="8" fill="#F0F7FF"/>
+    <text x="300" y="74" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">DISTRIBUTED EDGE ANALYTICS CORE</text>
+
+    <rect x="200" y="95" width="200" height="45" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="300" y="114" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">On-Premises Edge Inferencing</text>
+    <text x="300" y="129" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">Sub-5ms Vision Inspection &amp; Anomaly Detection</text>
+
+    <rect x="200" y="150" width="200" height="45" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="300" y="169" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0284C7" text-anchor="middle">Predictive Maintenance Model</text>
+    <text x="300" y="184" font-family="'Inter', sans-serif" font-size="8" fill="#0369A1" text-anchor="middle">Vibration Spectral FFT &amp; Bearing Degradation Curves</text>
+
+    <rect x="200" y="205" width="200" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="300" y="224" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Digital Twin Synchronization</text>
+    <text x="300" y="239" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Real-time Physical Asset State Replication</text>
+
+    <rect x="200" y="260" width="200" height="26" rx="4" fill="#FEF3C7" stroke="#FDE68A"/>
+    <text x="300" y="277" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#D97706" text-anchor="middle">Sovereign OT Security: Zero Inbound Ports</text>
+  </g>
+
+  <path d="M 415 175 L 450 175" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Plant Outcomes -->
+  <g filter="url(#indMfgShadow)">
+    <rect x="450" y="65" width="125" height="225" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="450" y="65" width="125" height="4" rx="2" fill="#059669"/>
+    <text x="512" y="90" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">OPERATIONAL GAINS</text>
+
+    <rect x="460" y="105" width="105" height="40" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="512" y="122" font-family="'Inter', sans-serif" font-size="9" font-weight="800" fill="#059669" text-anchor="middle">-42% Downtime</text>
+    <text x="512" y="136" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">Unplanned Outages Averted</text>
+
+    <rect x="460" y="155" width="105" height="40" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="512" y="172" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">+18% OEE</text>
+    <text x="512" y="186" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Equipment Effectiveness</text>
+
+    <rect x="460" y="205" width="105" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="512" y="222" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Zero Spills</text>
+    <text x="512" y="236" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">ISO 50001 Energy Guard</text>
+  </g>
+</svg>
+

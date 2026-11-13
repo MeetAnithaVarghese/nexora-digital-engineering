@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-labelledby="fintechTitle fintechDesc">
+  <title id="fintechTitle">Global FinTech Real-Time Settlement Engine</title>
+  <desc id="fintechDesc">Sub-millisecond payment clearing pipeline on Kafka, distributed in-memory transactions, and 4-region disaster recovery.</desc>
+  <defs>
+    <linearGradient id="finBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="finShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="320" rx="10" fill="url(#finBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Pipeline Flow -->
+  <g filter="url(#finShadow)">
+    <rect x="30" y="70" width="110" height="180" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="30" y="70" width="110" height="4" rx="2" fill="#0052CC"/>
+    <text x="85" y="95" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">INGESTION</text>
+    <text x="85" y="120" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Payment Events</text>
+    <text x="85" y="135" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Kafka Streams</text>
+    <rect x="40" y="160" width="90" height="30" rx="4" fill="#EBF3FF"/>
+    <text x="85" y="180" font-family="'Inter', sans-serif" font-size="9" font-weight="800" fill="#0052CC" text-anchor="middle">$4.2B Daily</text>
+  </g>
+
+  <path d="M 140 160 L 180 160" stroke="#0052CC" stroke-width="2"/>
+
+  <g filter="url(#finShadow)">
+    <rect x="180" y="60" width="220" height="200" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="180" y="60" width="220" height="26" rx="8" fill="#F0F7FF"/>
+    <text x="290" y="78" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">IN-MEMORY SETTLEMENT CORE</text>
+    
+    <rect x="195" y="100" width="190" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="290" y="120" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Distributed Transaction Ledger</text>
+    <text x="290" y="135" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Zero-Downtime Distributed Memory Consensus</text>
+
+    <rect x="195" y="155" width="190" height="45" rx="4" fill="#ECFDF5"/>
+    <text x="290" y="175" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">Latency Optimization</text>
+    <text x="290" y="190" font-family="'Inter', sans-serif" font-size="8" font-weight="800" fill="#059669" text-anchor="middle">&lt; 12ms (Reduced from 4h)</text>
+
+    <rect x="195" y="210" width="190" height="35" rx="4" fill="#F0F7FF" stroke="#0284C7"/>
+    <text x="290" y="232" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#0284C7" text-anchor="middle">Multi-Region Active-Active DR (4 Regions)</text>
+  </g>
+
+  <path d="M 400 160 L 440 160" stroke="#0052CC" stroke-width="2"/>
+
+  <g filter="url(#finShadow)">
+    <rect x="440" y="70" width="130" height="180" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="440" y="70" width="130" height="4" rx="2" fill="#059669"/>
+    <text x="505" y="95" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">GLOBAL CLEARING</text>
+    <text x="505" y="120" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Zero Data Loss</text>
+    <text x="505" y="135" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Audited ISO 20022</text>
+    <rect x="450" y="160" width="110" height="30" rx="4" fill="#ECFDF5"/>
+    <text x="505" y="180" font-family="'Inter', sans-serif" font-size="9" font-weight="800" fill="#059669" text-anchor="middle">99.999% SLA</text>
+  </g>
+
+  <rect x="170" y="15" width="260" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="31" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    FINTECH SETTLEMENT CASE ARCHITECTURE
+  </text>
+</svg>

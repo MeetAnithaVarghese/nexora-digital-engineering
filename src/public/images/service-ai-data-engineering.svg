@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350" role="img" aria-labelledby="aiDataTitle aiDataDesc">
+  <title id="aiDataTitle">AI &amp; Data Engineering Architecture</title>
+  <desc id="aiDataDesc">Enterprise real-time data pipeline, feature store, vector embeddings, and RAG orchestration.</desc>
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="350" rx="10" fill="url(#aiBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Stage 1: Ingestion -->
+  <g filter="url(#cardShadow)">
+    <rect x="30" y="50" width="100" height="250" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="30" y="50" width="100" height="4" rx="2" fill="#0052CC"/>
+    <text x="80" y="75" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">INGESTION</text>
+    
+    <rect x="40" y="95" width="80" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="80" y="115" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Event Stream</text>
+    <text x="80" y="127" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Kafka / Spark</text>
+
+    <rect x="40" y="150" width="80" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="80" y="170" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Batch Feeds</text>
+    <text x="80" y="182" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">S3 / Snowflake</text>
+
+    <rect x="40" y="205" width="80" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="80" y="225" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Schema Registry</text>
+    <text x="80" y="237" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Protobuf / Avro</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 130 115 L 180 115" stroke="#0052CC" stroke-width="2"/>
+  <path d="M 130 170 L 180 170" stroke="#0052CC" stroke-width="2"/>
+  <path d="M 130 225 L 180 225" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Stage 2: Processing & Feature Store -->
+  <g filter="url(#cardShadow)">
+    <rect x="180" y="50" width="110" height="250" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="180" y="50" width="110" height="25" rx="8" fill="#F0F7FF"/>
+    <text x="235" y="67" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">DATA FABRIC</text>
+
+    <rect x="190" y="95" width="90" height="50" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="235" y="117" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Feature Store</text>
+    <text x="235" y="132" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Feast / Real-time</text>
+
+    <rect x="190" y="160" width="90" height="50" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="235" y="182" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Model Registry</text>
+    <text x="235" y="197" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">MLflow / Drift Mon</text>
+
+    <rect x="190" y="225" width="90" height="50" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="235" y="247" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Lineage Engine</text>
+    <text x="235" y="262" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">OpenLineage</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 290 120 L 340 120" stroke="#0052CC" stroke-width="2"/>
+  <path d="M 290 185 L 340 185" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Stage 3: Vector Embeddings & LLM Guardrails -->
+  <g filter="url(#cardShadow)">
+    <rect x="340" y="50" width="110" height="250" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="340" y="50" width="110" height="4" rx="2" fill="#0284C7"/>
+    <text x="395" y="75" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">VECTOR RAG</text>
+
+    <rect x="350" y="95" width="90" height="50" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="395" y="117" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Embedding Model</text>
+    <text x="395" y="132" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Domain Tuned</text>
+
+    <rect x="350" y="160" width="90" height="50" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="395" y="182" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Vector Index</text>
+    <text x="395" y="197" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">HNSW / Cosine</text>
+
+    <rect x="350" y="225" width="90" height="50" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="395" y="247" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Reranker</text>
+    <text x="395" y="262" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Cross-Encoder</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 450 185 L 490 185" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Stage 4: Output -->
+  <g filter="url(#cardShadow)">
+    <rect x="490" y="100" width="85" height="150" rx="8" fill="#F0F7FF" stroke="#0052CC" stroke-width="1"/>
+    <text x="532" y="135" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">ENTERPRISE</text>
+    <text x="532" y="150" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">OUTCOME</text>
+    <line x1="505" y1="165" x2="560" y2="165" stroke="#CBD5E1"/>
+    <text x="532" y="185" font-family="'Inter', sans-serif" font-size="8" fill="#334155" text-anchor="middle">Zero Hallucination</text>
+    <text x="532" y="200" font-family="'Inter', sans-serif" font-size="8" fill="#334155" text-anchor="middle">Verifiable Citations</text>
+    <text x="532" y="220" font-family="'Inter', sans-serif" font-size="9" font-weight="800" fill="#059669" text-anchor="middle">99.4% Valid</text>
+  </g>
+
+  <rect x="180" y="12" width="240" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="28" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    AI &amp; DATA PLATFORM BLUEPRINT
+  </text>
+</svg>

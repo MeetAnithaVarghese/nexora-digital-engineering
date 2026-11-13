@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350" role="img" aria-labelledby="cloudPlatTitle cloudPlatDesc">
+  <title id="cloudPlatTitle">Cloud &amp; Platform Engineering Architecture</title>
+  <desc id="cloudPlatDesc">Multi-cloud Kubernetes topology, GitOps declarative delivery, and OpenTelemetry observability mesh.</desc>
+  <defs>
+    <linearGradient id="cloudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="cloudShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="350" rx="10" fill="url(#cloudBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Left: GitOps & Declarative IaC -->
+  <g filter="url(#cloudShadow)">
+    <rect x="30" y="65" width="115" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="30" y="65" width="115" height="4" rx="2" fill="#0052CC"/>
+    <text x="87" y="90" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">GITOPS &amp; IAC</text>
+
+    <rect x="40" y="110" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="87" y="130" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Declarative Code</text>
+    <text x="87" y="145" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">OpenTofu / Terraform</text>
+
+    <rect x="40" y="165" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="87" y="185" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Sync Controller</text>
+    <text x="87" y="200" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">ArgoCD / Flux</text>
+
+    <rect x="40" y="220" width="95" height="45" rx="4" fill="#EBF3FF"/>
+    <text x="87" y="240" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">Automated Rollback</text>
+    <text x="87" y="255" font-family="'Inter', sans-serif" font-size="8" fill="#059669" text-anchor="middle">Zero-Downtime</text>
+  </g>
+
+  <path d="M 145 185 L 185 185" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Center: Kubernetes Clusters & Service Mesh -->
+  <g filter="url(#cloudShadow)">
+    <rect x="185" y="55" width="230" height="240" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="185" y="55" width="230" height="26" rx="8" fill="#F0F7FF"/>
+    <text x="300" y="73" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">MULTI-CLOUD KUBERNETES MESH</text>
+
+    <!-- Cluster Region 1 -->
+    <rect x="200" y="95" width="95" height="85" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="247" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">Region A (EKS)</text>
+    <text x="247" y="130" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Active Pods</text>
+    <rect x="210" y="145" width="75" height="22" rx="4" fill="#ECFDF5"/>
+    <text x="247" y="160" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#059669" text-anchor="middle">Healthy</text>
+
+    <!-- Cluster Region 2 -->
+    <rect x="305" y="95" width="95" height="85" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="352" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">Region B (GKE)</text>
+    <text x="352" y="130" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Active Pods</text>
+    <rect x="315" y="145" width="75" height="22" rx="4" fill="#ECFDF5"/>
+    <text x="352" y="160" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#059669" text-anchor="middle">Healthy</text>
+
+    <!-- Service Mesh Link -->
+    <rect x="200" y="195" width="200" height="45" rx="6" fill="#F0F7FF" stroke="#0284C7"/>
+    <text x="300" y="215" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0284C7" text-anchor="middle">Cilium eBPF / mTLS Service Mesh</text>
+    <text x="300" y="230" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Kernel-Level Security &amp; Canary Routing</text>
+
+    <rect x="200" y="250" width="200" height="30" rx="4" fill="#EBF3FF"/>
+    <text x="300" y="270" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#0052CC" text-anchor="middle">Automated Cross-Region Failover</text>
+  </g>
+
+  <path d="M 415 185 L 455 185" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Right: Observability & FinOps -->
+  <g filter="url(#cloudShadow)">
+    <rect x="455" y="65" width="115" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="455" y="65" width="115" height="4" rx="2" fill="#0284C7"/>
+    <text x="512" y="90" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">OBSERVABILITY</text>
+
+    <rect x="465" y="110" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="512" y="130" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">OpenTelemetry</text>
+    <text x="512" y="145" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Distributed Traces</text>
+
+    <rect x="465" y="165" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="512" y="185" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Prometheus</text>
+    <text x="512" y="200" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">SLO Alerts</text>
+
+    <rect x="465" y="220" width="95" height="45" rx="4" fill="#EBF3FF"/>
+    <text x="512" y="240" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">FinOps Engine</text>
+    <text x="512" y="255" font-family="'Inter', sans-serif" font-size="8" fill="#059669" text-anchor="middle">-34% Cloud TCO</text>
+  </g>
+
+  <rect x="175" y="15" width="250" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="31" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    CLOUD &amp; PLATFORM BLUEPRINT
+  </text>
+</svg>

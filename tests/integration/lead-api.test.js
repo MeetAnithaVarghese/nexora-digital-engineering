@@ -1,7 +1,13 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { createLead, getLeads, updateLeadStatus, resetRateLimiterForTesting } = require('../../src/server/lead');
-const { getDb } = require('../../src/db');
+const { getDb, resetDbForTesting } = require('../../src/db');
+const { seedDatabase } = require('../../src/db/seed');
+
+test.before(() => {
+  resetDbForTesting(':memory:');
+  seedDatabase();
+});
 
 test('Integration: createLead persists valid enquiry and assigns status new', () => {
   resetRateLimiterForTesting();

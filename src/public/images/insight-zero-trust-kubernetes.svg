@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-labelledby="ztTitle ztDesc">
+  <title id="ztTitle">Zero-Trust Kubernetes Platform Hardening Architecture</title>
+  <desc id="ztDesc">eBPF packet filtering with Cilium, SPIFFE workload attestation, mutual TLS mesh, and immutable admission control.</desc>
+  <defs>
+    <linearGradient id="ztBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="ztShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="320" rx="10" fill="url(#ztBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <rect x="160" y="14" width="280" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="30" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    ZERO-TRUST KUBERNETES PLATFORM HARDENING
+  </text>
+
+  <!-- Ingress Control Gate -->
+  <g filter="url(#ztShadow)">
+    <rect x="25" y="65" width="125" height="225" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="25" y="65" width="125" height="4" rx="2" fill="#0052CC"/>
+    <text x="87" y="90" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">INGRESS GATEWAY</text>
+    <rect x="35" y="105" width="105" height="40" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="87" y="122" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">mTLS Termination</text>
+    <text x="87" y="136" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">TLS 1.3 / Strict Cipher</text>
+
+    <rect x="35" y="155" width="105" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="87" y="172" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">WAF &amp; Rate Limiter</text>
+    <text x="87" y="186" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">DDoS Shielding</text>
+
+    <rect x="35" y="205" width="105" height="40" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="87" y="222" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">SPIFFE Identity</text>
+    <text x="87" y="236" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">X.509 SVID Token</text>
+  </g>
+
+  <!-- Flow Arrow -->
+  <path d="M 150 175 L 185 175" stroke="#0052CC" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Service Mesh Core -->
+  <g filter="url(#ztShadow)">
+    <rect x="185" y="55" width="230" height="245" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="185" y="55" width="230" height="28" rx="8" fill="#F0F7FF"/>
+    <text x="300" y="74" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">CILIUM eBPF KERNEL ENFORCEMENT</text>
+
+    <rect x="200" y="95" width="200" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="300" y="114" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Kernel-Level Socket Filtering</text>
+    <text x="300" y="129" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Zero IPtables Overhead • P99 &lt; 0.2ms</text>
+
+    <rect x="200" y="150" width="200" height="45" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="300" y="169" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">Strict L7 Network Policies</text>
+    <text x="300" y="184" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">Default Deny-All • DNS-Aware Egress</text>
+
+    <rect x="200" y="205" width="200" height="45" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="300" y="224" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0284C7" text-anchor="middle">OPA Gatekeeper Admission</text>
+    <text x="300" y="239" font-family="'Inter', sans-serif" font-size="8" fill="#0369A1" text-anchor="middle">Cryptographic Image Signature Validation</text>
+
+    <rect x="200" y="260" width="200" height="26" rx="4" fill="#FEF3C7" stroke="#FDE68A"/>
+    <text x="300" y="277" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#D97706" text-anchor="middle">Runtime Threat Detection: Falco Seccomp</text>
+  </g>
+
+  <!-- Flow Arrow -->
+  <path d="M 415 175 L 450 175" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Enterprise Security Ledger -->
+  <g filter="url(#ztShadow)">
+    <rect x="450" y="65" width="125" height="225" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="450" y="65" width="125" height="4" rx="2" fill="#059669"/>
+    <text x="512" y="90" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">AUDIT &amp; TELEMETRY</text>
+
+    <rect x="460" y="105" width="105" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="512" y="122" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Immutable SIEM</text>
+    <text x="512" y="136" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Splunk / Datadog Sync</text>
+
+    <rect x="460" y="155" width="105" height="40" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="512" y="172" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">Compliance Attestation</text>
+    <text x="512" y="186" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Automated SOC 2 / ISO</text>
+
+    <rect x="460" y="205" width="105" height="40" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="512" y="222" font-family="'Inter', sans-serif" font-size="9" font-weight="800" fill="#059669" text-anchor="middle">Zero CVE Breach</text>
+    <text x="512" y="236" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">100% Policy Pass</text>
+  </g>
+</svg>
+

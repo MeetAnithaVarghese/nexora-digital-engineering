@@ -1,7 +1,13 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { searchEntities } = require('../../src/server/search');
-const { getDb } = require('../../src/db');
+const { getDb, resetDbForTesting } = require('../../src/db');
+const { seedDatabase } = require('../../src/db/seed');
+
+test.before(() => {
+  resetDbForTesting(':memory:');
+  seedDatabase();
+});
 
 test('Integration: searchEntities finds services, case studies, and articles', () => {
   getDb();

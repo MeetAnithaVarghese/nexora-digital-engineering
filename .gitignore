@@ -8,6 +8,9 @@ node_modules/
 
 # Database files
 *.db
+*.db.bak
+*.db-shm
+*.db-wal
 *.sqlite
 *.sqlite3
 nexora.db

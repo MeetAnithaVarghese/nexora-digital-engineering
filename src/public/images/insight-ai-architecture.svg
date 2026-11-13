@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-labelledby="insTitle insDesc">
+  <title id="insTitle">Enterprise AI Systems Architecture &amp; Governance Framework</title>
+  <desc id="insDesc">End-to-end enterprise AI architecture: Domain Modeling, Agent Swarm Orchestration, Output Verification, and Sovereign Production Enclaves.</desc>
+  <defs>
+    <linearGradient id="insBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="insShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="320" rx="10" fill="url(#insBg)" stroke="#CBD5E1" stroke-width="1.2"/>
+
+  <!-- Title Pill -->
+  <rect x="140" y="16" width="320" height="26" rx="13" fill="#EFF6FF" stroke="#BAE6FD" stroke-width="1"/>
+  <text x="300" y="33" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#0052CC" text-anchor="middle" letter-spacing="0.04em">
+    AI-NATIVE SYSTEMS ARCHITECTURE PIPELINE
+  </text>
+
+  <!-- Step 1: Domain Modeling -->
+  <g filter="url(#insShadow)">
+    <rect x="25" y="65" width="120" height="225" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+    <rect x="25" y="65" width="120" height="30" rx="8" fill="#F0F7FF"/>
+    <text x="85" y="84" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="#0052CC" text-anchor="middle">1. DOMAIN SPEC</text>
+
+    <text x="85" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">Ontology Modeling</text>
+    <text x="85" y="130" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Domain Schemas</text>
+    <rect x="35" y="148" width="100" height="42" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="85" y="165" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Strict Type</text>
+    <text x="85" y="179" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Invariants</text>
+    <rect x="35" y="202" width="100" height="42" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="85" y="219" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#0052CC" text-anchor="middle">Input Guardrails</text>
+    <text x="85" y="233" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">Zero Ambiguity</text>
+    <rect x="35" y="254" width="100" height="24" rx="4" fill="#F0FDF4"/>
+    <text x="85" y="270" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">&#10003; Model Grounded</text>
+  </g>
+
+  <!-- Flow Arrow 1-2 -->
+  <path d="M 150 175 L 168 175" stroke="#0052CC" stroke-width="2" stroke-dasharray="3 2"/>
+  <polygon points="168,171 174,175 168,179" fill="#0052CC"/>
+
+  <!-- Step 2: Agent Swarm Orchestration -->
+  <g filter="url(#insShadow)">
+    <rect x="175" y="65" width="120" height="225" rx="8" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.2"/>
+    <rect x="175" y="65" width="120" height="30" rx="8" fill="#EFF6FF"/>
+    <text x="235" y="84" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="#0052CC" text-anchor="middle">2. AGENT SWARM</text>
+
+    <text x="235" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">Autonomous Mesh</text>
+    <text x="235" y="130" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Role-Specialized</text>
+    <rect x="185" y="148" width="100" height="42" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="235" y="165" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Task Slices &amp;</text>
+    <text x="235" y="179" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Shared Context</text>
+    <rect x="185" y="202" width="100" height="42" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="235" y="219" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#0052CC" text-anchor="middle">Tool Execution</text>
+    <text x="235" y="233" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">Sandbox Enclave</text>
+    <rect x="185" y="254" width="100" height="24" rx="4" fill="#F0FDF4"/>
+    <text x="235" y="270" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">&#10003; Context Locked</text>
+  </g>
+
+  <!-- Flow Arrow 2-3 -->
+  <path d="M 300 175 L 318 175" stroke="#0052CC" stroke-width="2" stroke-dasharray="3 2"/>
+  <polygon points="318,171 324,175 318,179" fill="#0052CC"/>
+
+  <!-- Step 3: Dual Verification -->
+  <g filter="url(#insShadow)">
+    <rect x="325" y="65" width="120" height="225" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+    <rect x="325" y="65" width="120" height="30" rx="8" fill="#F0F7FF"/>
+    <text x="385" y="84" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="#0052CC" text-anchor="middle">3. VERIFICATION</text>
+
+    <text x="385" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">Dual Verification</text>
+    <text x="385" y="130" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Automated &amp; Human</text>
+    <rect x="335" y="148" width="100" height="42" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="385" y="165" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Adversarial Checks</text>
+    <text x="385" y="179" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Hallucination Tests</text>
+    <rect x="335" y="202" width="100" height="42" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="385" y="219" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#0052CC" text-anchor="middle">Governance Gate</text>
+    <text x="385" y="233" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">Executive Sign-Off</text>
+    <rect x="335" y="254" width="100" height="24" rx="4" fill="#F0FDF4"/>
+    <text x="385" y="270" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">&#10003; 100% Attested</text>
+  </g>
+
+  <!-- Flow Arrow 3-4 -->
+  <path d="M 450 175 L 468 175" stroke="#0052CC" stroke-width="2" stroke-dasharray="3 2"/>
+  <polygon points="468,171 474,175 468,179" fill="#0052CC"/>
+
+  <!-- Step 4: Sovereign Enclave -->
+  <g filter="url(#insShadow)">
+    <rect x="475" y="65" width="105" height="225" rx="8" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1.2"/>
+    <rect x="475" y="65" width="105" height="30" rx="8" fill="#F0FDF4"/>
+    <text x="527" y="84" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="#15803D" text-anchor="middle">4. ENCLAVE</text>
+
+    <text x="527" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">Production Run</text>
+    <text x="527" y="130" font-family="'Inter', sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">Confidential CPU</text>
+    <rect x="483" y="148" width="89" height="42" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="527" y="165" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Immutable Audit</text>
+    <text x="527" y="179" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#334155" text-anchor="middle">Telemetry Logs</text>
+    <rect x="483" y="202" width="89" height="42" rx="4" fill="#F0FDF4" stroke="#86EFAC"/>
+    <text x="527" y="219" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">Zero-Downtime</text>
+    <text x="527" y="233" font-family="'Inter', sans-serif" font-size="8" fill="#15803D" text-anchor="middle">Cutover Ready</text>
+    <rect x="483" y="254" width="89" height="24" rx="4" fill="#ECFDF5"/>
+    <text x="527" y="270" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">&#10003; Live in Cloud</text>
+  </g>
+</svg>

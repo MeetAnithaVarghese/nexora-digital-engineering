@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" role="img" aria-labelledby="bpTitle bpDesc">
+  <title id="bpTitle">Nexora Enterprise Architecture Blueprint</title>
+  <desc id="bpDesc">Light-mode enterprise reference architecture: Client Channels to Edge Security, Intelligent Data &amp; AI Core, and Sovereign Cloud Infrastructure with Immutable Telemetry.</desc>
+  <defs>
+    <linearGradient id="bpCanvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#F0F7FF"/>
+    </linearGradient>
+    <linearGradient id="tierGradClient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="tierGradEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0F9FF"/>
+    </linearGradient>
+    <linearGradient id="tierGradCore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="tierGradCloud" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0FDF4"/>
+    </linearGradient>
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052CC"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="bpDropShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="nodeShadow" x="-8%" y="-8%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="460" rx="14" fill="url(#bpCanvasBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Top Decorative Header Bar -->
+  <rect x="0" y="0" width="1000" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="24" y="16" width="220" height="22" rx="11" fill="#F0F7FF" stroke="#BAE6FD" stroke-width="1"/>
+  <circle cx="35" cy="27" r="4" fill="#0052CC"/>
+  <text x="46" y="31" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="700" fill="#0052CC" letter-spacing="0.05em">
+    SYSTEM REFERENCE BLUEPRINT v4.2
+  </text>
+  <text x="500" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0A192F" text-anchor="middle">
+    NEXORA DIGITAL ENGINEERING &mdash; ENTERPRISE REFERENCE TOPOLOGY
+  </text>
+  <rect x="830" y="15" width="145" height="22" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="902" y="30" font-family="'Inter', -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#059669" text-anchor="middle">
+    &#10003; PRODUCTION CERTIFIED
+  </text>
+
+  <!-- Flow Direction Arrows across Canvas -->
+  <path d="M 242 245 L 268 245" stroke="#0052CC" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <path d="M 492 245 L 518 245" stroke="#0052CC" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <path d="M 742 245 L 768 245" stroke="#0052CC" stroke-width="2.5" stroke-dasharray="4 3"/>
+
+  <!-- ================= TIER 1: CLIENT CHANNELS ================= -->
+  <g filter="url(#bpDropShadow)">
+    <rect x="24" y="75" width="218" height="345" rx="10" fill="url(#tierGradClient)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="24" y="75" width="218" height="38" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="133" y="99" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#0A192F" text-anchor="middle" letter-spacing="0.04em">
+      1. CLIENT CHANNELS
+    </text>
+
+    <!-- Node 1.1: Web -->
+    <g filter="url(#nodeShadow)">
+      <rect x="38" y="126" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="46" y="136" width="6" height="38" rx="3" fill="#0052CC"/>
+      <text x="62" y="151" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Omnichannel Web Apps</text>
+      <text x="62" y="168" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">TypeScript / Reactive Micro-UI</text>
+    </g>
+
+    <!-- Node 1.2: Mobile & SDKs -->
+    <g filter="url(#nodeShadow)">
+      <rect x="38" y="196" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="46" y="206" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="62" y="221" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Native Mobile &amp; SDKs</text>
+      <text x="62" y="238" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Offline Sync &amp; Biometric Auth</text>
+    </g>
+
+    <!-- Node 1.3: Partner APIs -->
+    <g filter="url(#nodeShadow)">
+      <rect x="38" y="266" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="46" y="276" width="6" height="38" rx="3" fill="#0052CC"/>
+      <text x="62" y="291" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">B2B Partner Ingestion</text>
+      <text x="62" y="308" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">gRPC / OpenAPI v3 Contracts</text>
+    </g>
+
+    <!-- Node 1.4: IoT & Edge Telemetry -->
+    <g filter="url(#nodeShadow)">
+      <rect x="38" y="336" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="46" y="346" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="62" y="361" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Industrial Edge Sensors</text>
+      <text x="62" y="378" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">MQTT / OPC-UA Telemetry</text>
+    </g>
+  </g>
+
+  <!-- Connector Chevron 1 -->
+  <polygon points="252,240 262,245 252,250" fill="#0052CC"/>
+
+  <!-- ================= TIER 2: EDGE SECURITY & GATEWAY ================= -->
+  <g filter="url(#bpDropShadow)">
+    <rect x="274" y="75" width="218" height="345" rx="10" fill="url(#tierGradEdge)" stroke="#BAE6FD" stroke-width="1.5"/>
+    <rect x="274" y="75" width="218" height="38" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+    <text x="383" y="99" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#0052CC" text-anchor="middle" letter-spacing="0.04em">
+      2. EDGE SECURITY &amp; API
+    </text>
+
+    <!-- Node 2.1: Zero-Trust WAF -->
+    <g filter="url(#nodeShadow)">
+      <rect x="288" y="126" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <rect x="296" y="136" width="6" height="38" rx="3" fill="#0052CC"/>
+      <text x="312" y="151" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Cloudflare WAF / DDoS</text>
+      <text x="312" y="168" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Layer-7 Invariant Inspection</text>
+    </g>
+
+    <!-- Node 2.2: Mutual TLS & Auth -->
+    <g filter="url(#nodeShadow)">
+      <rect x="288" y="196" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <rect x="296" y="206" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="312" y="221" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">mTLS &amp; Token Authority</text>
+      <text x="312" y="238" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Magic Link &amp; SHA-256 Tokens</text>
+    </g>
+
+    <!-- Node 2.3: Dynamic Rate Limiter -->
+    <g filter="url(#nodeShadow)">
+      <rect x="288" y="266" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <rect x="296" y="276" width="6" height="38" rx="3" fill="#0052CC"/>
+      <text x="312" y="291" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Deterministic Rate Limiter</text>
+      <text x="312" y="308" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Leaky Bucket &amp; IP Quarantine</text>
+    </g>
+
+    <!-- Node 2.4: API Ingress Router -->
+    <g filter="url(#nodeShadow)">
+      <rect x="288" y="336" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <rect x="296" y="346" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="312" y="361" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Edge Ingress Envoy Proxy</text>
+      <text x="312" y="378" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">&lt; 1ms Route Dispatching</text>
+    </g>
+  </g>
+
+  <!-- Connector Chevron 2 -->
+  <polygon points="502,240 512,245 502,250" fill="#0052CC"/>
+
+  <!-- ================= TIER 3: INTELLIGENT DATA & AI CORE ================= -->
+  <g filter="url(#bpDropShadow)">
+    <rect x="524" y="75" width="218" height="345" rx="10" fill="url(#tierGradCore)" stroke="#BFDBFE" stroke-width="1.5"/>
+    <rect x="524" y="75" width="218" height="38" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+    <text x="633" y="99" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#0052CC" text-anchor="middle" letter-spacing="0.04em">
+      3. DATA &amp; AI ENGINE CORE
+    </text>
+
+    <!-- Node 3.1: Event Streaming Fabric -->
+    <g filter="url(#nodeShadow)">
+      <rect x="538" y="126" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1"/>
+      <rect x="546" y="136" width="6" height="38" rx="3" fill="#0052CC"/>
+      <text x="562" y="151" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Kafka Streaming Mesh</text>
+      <text x="562" y="168" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Event Sourcing &amp; CQRS Bus</text>
+    </g>
+
+    <!-- Node 3.2: Sovereign Vector & RAG -->
+    <g filter="url(#nodeShadow)">
+      <rect x="538" y="196" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1"/>
+      <rect x="546" y="206" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="562" y="221" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Confidential RAG &amp; Vector</text>
+      <text x="562" y="238" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Encrypted Memory In-Flight</text>
+    </g>
+
+    <!-- Node 3.3: Autonomous Agent Mesh -->
+    <g filter="url(#nodeShadow)">
+      <rect x="538" y="266" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1"/>
+      <rect x="546" y="276" width="6" height="38" rx="3" fill="#0052CC"/>
+      <text x="562" y="291" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Orchestrated Agent Swarm</text>
+      <text x="562" y="308" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Dual Verification Safety Net</text>
+    </g>
+
+    <!-- Node 3.4: In-Memory Ledger -->
+    <g filter="url(#nodeShadow)">
+      <rect x="538" y="336" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1"/>
+      <rect x="546" y="346" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="562" y="361" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">High-Speed State Core</text>
+      <text x="562" y="378" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">ACID Transactions &amp; WAL</text>
+    </g>
+  </g>
+
+  <!-- Connector Chevron 3 -->
+  <polygon points="752,240 762,245 752,250" fill="#0052CC"/>
+
+  <!-- ================= TIER 4: SOVEREIGN CLOUD & TELEMETRY ================= -->
+  <g filter="url(#bpDropShadow)">
+    <rect x="774" y="75" width="202" height="345" rx="10" fill="url(#tierGradCloud)" stroke="#BBF7D0" stroke-width="1.5"/>
+    <rect x="774" y="75" width="202" height="38" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+    <text x="875" y="99" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#059669" text-anchor="middle" letter-spacing="0.04em">
+      4. SOVEREIGN CLOUD
+    </text>
+
+    <!-- Node 4.1: Kubernetes Clusters -->
+    <g filter="url(#nodeShadow)">
+      <rect x="786" y="126" width="178" height="58" rx="6" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="794" y="136" width="6" height="38" rx="3" fill="#059669"/>
+      <text x="810" y="151" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Multi-Cloud K8s</text>
+      <text x="810" y="168" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Active-Active Quad Region</text>
+    </g>
+
+    <!-- Node 4.2: Hardware Security Enclave -->
+    <g filter="url(#nodeShadow)">
+      <rect x="786" y="196" width="178" height="58" rx="6" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="794" y="206" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="810" y="221" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">HSM Key Vault</text>
+      <text x="810" y="238" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">FIPS 140-3 Cryptographic Attest</text>
+    </g>
+
+    <!-- Node 4.3: eBPF Telemetry -->
+    <g filter="url(#nodeShadow)">
+      <rect x="786" y="266" width="178" height="58" rx="6" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="794" y="276" width="6" height="38" rx="3" fill="#059669"/>
+      <text x="810" y="291" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Cilium eBPF Mesh</text>
+      <text x="810" y="308" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Kernel-Level Observability</text>
+    </g>
+
+    <!-- Node 4.4: Immutable Audit Trail -->
+    <g filter="url(#nodeShadow)">
+      <rect x="786" y="336" width="178" height="58" rx="6" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="794" y="346" width="6" height="38" rx="3" fill="#0284C7"/>
+      <text x="810" y="361" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0A192F">Immutable Audit Bus</text>
+      <text x="810" y="378" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">WORM Storage &amp; Compliance</text>
+    </g>
+  </g>
+
+  <!-- Bottom Global Footnote Bar -->
+  <rect x="24" y="427" width="952" height="22" rx="4" fill="#F1F5F9"/>
+  <text x="35" y="442" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#475569">
+    &bull; Guaranteed Constitutional Invariants: Zero Third-Party Telemetry &bull; mTLS Attested Internal Mesh &bull; Sub-15ms Global Consensus &bull; ISO 27001 / SOC 2 Type II Certified
+  </text>
+  <text x="965" y="442" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#0052CC" text-anchor="end">
+    NEXORA ARCHITECTURE BOARD
+  </text>
+</svg>

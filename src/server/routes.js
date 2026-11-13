@@ -5,7 +5,15 @@ const url = require('node:url');
 const { getDb } = require('../db');
 const { createLead, getLeads, updateLeadStatus } = require('./lead');
 const { searchEntities } = require('./search');
-const { verifyPassword, createSession, validateSession, destroySession, parseCookies } = require('./auth');
+const {
+  verifyPassword,
+  createSession,
+  validateSession,
+  destroySession,
+  parseCookies,
+  createMagicLink,
+  verifyMagicLink
+} = require('./auth');
 const { generateSitemapXml, generateRobotsTxt } = require('./seo');
 const {
   renderHomePage,
@@ -13,10 +21,14 @@ const {
   renderServicesPage,
   renderServiceDetailPage,
   renderIndustriesPage,
+  renderIndustryDetailPage,
   renderCaseStudiesPage,
+  renderCaseStudyDetailPage,
   renderInsightsPage,
+  renderArticleDetailPage,
   renderContactPage,
-  renderSearchPage
+  renderSearchPage,
+  INDUSTRIES
 } = require('../views/pages');
 const { renderLoginPage, renderAdminDashboard } = require('../views/admin');
 
@@ -74,20 +86,43 @@ async function handleRequest(req, res) {
   const userSession = validateSession(cookies.session_token);
 
   // 1. Static Asset Serving
-  if (pathname.startsWith('/public/')) {
-    const filePath = path.join(__dirname, '..', pathname);
-    if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-      const ext = path.extname(filePath);
+  if (pathname.startsWith('/public/') || pathname.startsWith('/images/') || pathname.startsWith('/css/') || pathname.startsWith('/js/')) {
+    const publicDir = path.resolve(__dirname, '..', 'public');
+    let subPath = '';
+    if (pathname.startsWith('/images/')) {
+      subPath = path.join('images', pathname.slice('/images/'.length));
+    } else if (pathname.startsWith('/css/')) {
+      subPath = path.join('css', pathname.slice('/css/'.length));
+    } else if (pathname.startsWith('/js/')) {
+      subPath = path.join('js', pathname.slice('/js/'.length));
+    } else if (pathname.startsWith('/public/')) {
+      subPath = pathname.slice('/public/'.length);
+    }
+    // Prevent directory traversal attacks
+    const safeSubPath = path.normalize(subPath).replace(/^(\.\.[\/\\])+/, '');
+    const filePath = path.resolve(publicDir, safeSubPath);
+
+    if (filePath.startsWith(publicDir) && fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+      const ext = path.extname(filePath).toLowerCase();
       const mimeTypes = {
-        '.css': 'text/css',
-        '.js': 'application/javascript',
+        '.css': 'text/css; charset=utf-8',
+        '.js': 'application/javascript; charset=utf-8',
         '.svg': 'image/svg+xml',
-        '.png': 'image/png'
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.ico': 'image/x-icon',
+        '.woff2': 'font/woff2',
+        '.woff': 'font/woff',
+        '.json': 'application/json'
       };
-      res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'text/plain' });
+      res.writeHead(200, {
+        'Content-Type': mimeTypes[ext] || 'application/octet-stream',
+        'Cache-Control': 'public, max-age=3600'
+      });
       return fs.createReadStream(filePath).pipe(res);
     }
-    res.writeHead(404);
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
     return res.end('Asset Not Found');
   }
 
@@ -135,11 +170,23 @@ async function handleRequest(req, res) {
     if (!service) {
       return sendHtml(res, 404, '<h1>404 Service Practice Not Found</h1><p><a href="/services">Return to Services</a></p>');
     }
-    return sendHtml(res, 200, renderServiceDetailPage(service));
+    const relatedCaseStudies = db.prepare('SELECT * FROM case_studies LIMIT 2').all();
+    return sendHtml(res, 200, renderServiceDetailPage(service, relatedCaseStudies));
   }
 
   if (pathname === '/industries' && method === 'GET') {
     return sendHtml(res, 200, renderIndustriesPage());
+  }
+
+  if (pathname.startsWith('/industries/') && method === 'GET') {
+    const slug = pathname.replace('/industries/', '').replace(/\/$/, '');
+    const industry = INDUSTRIES.find(i => i.slug === slug || (i.aliases && i.aliases.includes(slug)));
+    if (!industry) {
+      return sendHtml(res, 404, '<h1>404 Industry Domain Not Found</h1><p><a href="/industries">Return to Industries</a></p>');
+    }
+    const relatedCaseStudies = db.prepare('SELECT * FROM case_studies').all();
+    const relatedServices = db.prepare('SELECT * FROM services LIMIT 3').all();
+    return sendHtml(res, 200, renderIndustryDetailPage(industry, relatedCaseStudies, relatedServices));
   }
 
   if (pathname === '/case-studies' && method === 'GET') {
@@ -147,14 +194,36 @@ async function handleRequest(req, res) {
     return sendHtml(res, 200, renderCaseStudiesPage(caseStudies));
   }
 
+  if (pathname.startsWith('/case-studies/') && method === 'GET') {
+    const slug = pathname.replace('/case-studies/', '').replace(/\/$/, '');
+    const caseStudy = db.prepare('SELECT * FROM case_studies WHERE slug = ?').get(slug);
+    if (!caseStudy) {
+      return sendHtml(res, 404, '<h1>404 Case Study Not Found</h1><p><a href="/case-studies">Return to Case Studies</a></p>');
+    }
+    const relatedServices = db.prepare('SELECT * FROM services LIMIT 3').all();
+    return sendHtml(res, 200, renderCaseStudyDetailPage(caseStudy, relatedServices));
+  }
+
   if (pathname === '/insights' && method === 'GET') {
     const articles = db.prepare("SELECT * FROM articles WHERE status = 'published' ORDER BY published_at DESC").all();
     return sendHtml(res, 200, renderInsightsPage(articles));
   }
 
+  if (pathname.startsWith('/insights/') && method === 'GET') {
+    const slug = pathname.replace('/insights/', '').replace(/\/$/, '');
+    const article = db.prepare('SELECT * FROM articles WHERE slug = ?').get(slug);
+    if (!article) {
+      return sendHtml(res, 404, '<h1>404 Strategic Briefing Not Found</h1><p><a href="/insights">Return to Insights</a></p>');
+    }
+    const relatedArticles = db.prepare("SELECT * FROM articles WHERE status = 'published' AND slug != ? LIMIT 2").all(slug);
+    const relatedServices = db.prepare('SELECT * FROM services LIMIT 3').all();
+    return sendHtml(res, 200, renderArticleDetailPage(article, relatedArticles, relatedServices));
+  }
+
   if (pathname === '/contact' && method === 'GET') {
     const selectedService = parsedUrl.query.service || '';
-    return sendHtml(res, 200, renderContactPage(selectedService));
+    const selectedIndustry = parsedUrl.query.industry || '';
+    return sendHtml(res, 200, renderContactPage(selectedService, selectedIndustry));
   }
 
   if (pathname === '/search' && method === 'GET') {
@@ -203,7 +272,71 @@ async function handleRequest(req, res) {
     return sendJson(res, 200, { success: true, data: results });
   }
 
-  // 8. REST API: Authentication (Login / Logout)
+  // 8. REST API: Authentication (Magic Link & Session)
+  if (pathname === '/api/auth/magic-link' && method === 'POST') {
+    try {
+      const contentType = req.headers['content-type'] || '';
+      let body = {};
+      if (contentType.includes('application/json')) {
+        body = await parseJsonBody(req);
+      } else {
+        body = await parseFormBody(req);
+      }
+
+      const email = body.email;
+      if (!email || typeof email !== 'string' || !email.includes('@')) {
+        return sendJson(res, 400, {
+          success: false,
+          error: { code: 'INVALID_EMAIL', message: 'A valid staff email address is required.' }
+        });
+      }
+
+      const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress || '127.0.0.1';
+      const result = createMagicLink(email, clientIp);
+      if (result) {
+        console.log(`[Auth] Magic link for ${email}: /api/auth/verify?token=${result.rawToken}`);
+      }
+
+      if (contentType.includes('application/json')) {
+        return sendJson(res, 200, {
+          success: true,
+          data: {
+            message: 'If an authorized account matches this email, a login link has been dispatched.',
+            ...(process.env.NODE_ENV !== 'production' && result ? { devToken: result.rawToken, verifyUrl: `/api/auth/verify?token=${result.rawToken}` } : {})
+          }
+        });
+      }
+
+      return sendHtml(res, 200, renderLoginPage(null, 'A sign-in link has been dispatched to your email address.'));
+    } catch (err) {
+      return sendJson(res, 400, {
+        success: false,
+        error: { code: 'REQUEST_ERROR', message: err.message }
+      });
+    }
+  }
+
+  if (pathname === '/api/auth/verify' && method === 'GET') {
+    const rawToken = parsedUrl.query.token;
+    if (!rawToken) {
+      return sendHtml(res, 400, renderLoginPage('Missing or invalid authentication token.'));
+    }
+
+    const verifiedUser = verifyMagicLink(rawToken);
+    if (!verifiedUser) {
+      return sendHtml(res, 401, renderLoginPage('This login link is invalid, expired, or has already been used.'));
+    }
+
+    const session = createSession(verifiedUser.userId);
+    const cookieHeader = `session_token=${session.token}; HttpOnly; Path=/; SameSite=Strict; Max-Age=259200`;
+
+    res.writeHead(302, {
+      Location: '/admin',
+      'Set-Cookie': cookieHeader
+    });
+    return res.end();
+  }
+
   if (pathname === '/api/auth/login' && method === 'POST') {
     const contentType = req.headers['content-type'] || '';
     let credentials = {};

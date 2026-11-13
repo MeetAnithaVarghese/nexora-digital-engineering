@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-labelledby="healthTitle healthDesc">
+  <title id="healthTitle">HIPAA-Compliant Clinical AI Platform</title>
+  <desc id="healthDesc">On-premise RAG platform with cryptographically attested vector indices, zero PII transmission, and diagnostic history synthesis.</desc>
+  <defs>
+    <linearGradient id="healthBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="healthShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="320" rx="10" fill="url(#healthBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Pipeline Flow -->
+  <g filter="url(#healthShadow)">
+    <rect x="30" y="70" width="110" height="180" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="30" y="70" width="110" height="4" rx="2" fill="#0284C7"/>
+    <text x="85" y="95" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">EHR DATA INGEST</text>
+    <text x="85" y="120" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Clinical Records</text>
+    <text x="85" y="135" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">FHIR / HL7 Feeds</text>
+    <rect x="40" y="160" width="90" height="30" rx="4" fill="#EBF3FF"/>
+    <text x="85" y="180" font-family="'Inter', sans-serif" font-size="8" font-weight="800" fill="#0052CC" text-anchor="middle">On-Prem Airgap</text>
+  </g>
+
+  <path d="M 140 160 L 180 160" stroke="#0052CC" stroke-width="2"/>
+
+  <g filter="url(#healthShadow)">
+    <rect x="180" y="60" width="220" height="200" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="180" y="60" width="220" height="26" rx="8" fill="#F0F7FF"/>
+    <text x="290" y="78" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">PRIVATE RAG SYNTHESIS CORE</text>
+    
+    <rect x="195" y="100" width="190" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="290" y="120" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Encrypted Vector Embeddings</text>
+    <text x="290" y="135" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Zero-Data-Retention • Anti-Hallucination Filter</text>
+
+    <rect x="195" y="155" width="190" height="45" rx="4" fill="#ECFDF5"/>
+    <text x="290" y="175" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">Clinical Synthesis</text>
+    <text x="290" y="190" font-family="'Inter', sans-serif" font-size="8" font-weight="800" fill="#059669" text-anchor="middle">-68% Chart Synthesis Time (Saved 2h/shift)</text>
+
+    <rect x="195" y="210" width="190" height="35" rx="4" fill="#F0F7FF" stroke="#0284C7"/>
+    <text x="290" y="232" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#0284C7" text-anchor="middle">99.4% Diagnostic Citation Accuracy</text>
+  </g>
+
+  <path d="M 400 160 L 440 160" stroke="#0052CC" stroke-width="2"/>
+
+  <g filter="url(#healthShadow)">
+    <rect x="440" y="70" width="130" height="180" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="440" y="70" width="130" height="4" rx="2" fill="#059669"/>
+    <text x="505" y="95" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">HIPAA SECURE</text>
+    <text x="505" y="120" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">100% On-Premise</text>
+    <text x="505" y="135" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Zero External PII</text>
+    <rect x="450" y="160" width="110" height="30" rx="4" fill="#ECFDF5"/>
+    <text x="505" y="180" font-family="'Inter', sans-serif" font-size="9" font-weight="800" fill="#059669" text-anchor="middle">Validated HIPAA</text>
+  </g>
+
+  <rect x="160" y="15" width="280" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="31" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    CLINICAL AI &amp; HEALTHCARE PLATFORM
+  </text>
+</svg>

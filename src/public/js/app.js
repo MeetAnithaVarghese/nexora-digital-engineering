@@ -57,7 +57,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Admin Lead Status Update Handler
+  // 2. Mobile Navigation Toggle (WCAG 2.1 AA)
+  const mobileToggle = document.getElementById('mobileNavToggle');
+  const primaryNav = document.getElementById('primary-nav');
+  if (mobileToggle && primaryNav) {
+    mobileToggle.addEventListener('click', () => {
+      const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!isExpanded));
+      primaryNav.classList.toggle('open');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && primaryNav.classList.contains('open')) {
+        primaryNav.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.focus();
+      }
+    });
+  }
+
+  // 3. Admin Lead Status Update Handler
   window.updateLeadStatus = async function(id, status) {
     try {
       const res = await fetch(`/api/admin/leads/${id}/status`, {

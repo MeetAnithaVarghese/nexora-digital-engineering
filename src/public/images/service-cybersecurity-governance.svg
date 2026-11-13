@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350" role="img" aria-labelledby="secTitle secDesc">
+  <title id="secTitle">Cybersecurity &amp; Governance Architecture</title>
+  <desc id="secDesc">Zero-trust network access, cryptographic workload attestation, and automated DevSecOps compliance scanning.</desc>
+  <defs>
+    <linearGradient id="secBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="secShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="350" rx="10" fill="url(#secBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Left: Identity & Access Gate -->
+  <g filter="url(#secShadow)">
+    <rect x="30" y="65" width="115" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="30" y="65" width="115" height="4" rx="2" fill="#0052CC"/>
+    <text x="87" y="90" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">ZERO-TRUST IAM</text>
+
+    <rect x="40" y="110" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="87" y="130" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Passwordless Link</text>
+    <text x="87" y="145" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">SHA-256 Single-Use</text>
+
+    <rect x="40" y="165" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="87" y="185" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Dual-Horizon TTL</text>
+    <text x="87" y="200" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">72h Max / 24h Idle</text>
+
+    <rect x="40" y="220" width="95" height="45" rx="4" fill="#EBF3FF"/>
+    <text x="87" y="240" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">RBAC Clearance</text>
+    <text x="87" y="255" font-family="'Inter', sans-serif" font-size="8" fill="#059669" text-anchor="middle">Least Privilege</text>
+  </g>
+
+  <path d="M 145 185 L 185 185" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Center: Cryptographic Perimeter & DevSecOps -->
+  <g filter="url(#secShadow)">
+    <rect x="185" y="55" width="230" height="240" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="185" y="55" width="230" height="26" rx="8" fill="#F0F7FF"/>
+    <text x="300" y="73" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">CRYPTOGRAPHIC HARDENING</text>
+
+    <!-- SAST / DAST Scanner -->
+    <rect x="200" y="95" width="95" height="85" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="247" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">SAST &amp; SBOM</text>
+    <text x="247" y="130" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Supply Chain Audit</text>
+    <rect x="210" y="145" width="75" height="22" rx="4" fill="#ECFDF5"/>
+    <text x="247" y="160" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#059669" text-anchor="middle">Zero CVEs</text>
+
+    <!-- mTLS Mesh -->
+    <rect x="305" y="95" width="95" height="85" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="352" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">mTLS &amp; Attest</text>
+    <text x="352" y="130" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">SPIFFE / SPIRE</text>
+    <rect x="315" y="145" width="75" height="22" rx="4" fill="#ECFDF5"/>
+    <text x="352" y="160" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#059669" text-anchor="middle">Encrypted</text>
+
+    <!-- Automated Governance -->
+    <rect x="200" y="195" width="200" height="45" rx="6" fill="#F0F7FF" stroke="#0284C7"/>
+    <text x="300" y="215" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0284C7" text-anchor="middle">Continuous Compliance Automation</text>
+    <text x="300" y="230" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">SOC 2 Type II • ISO 27001 • HIPAA</text>
+
+    <rect x="200" y="250" width="200" height="30" rx="4" fill="#EBF3FF"/>
+    <text x="300" y="270" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#0052CC" text-anchor="middle">Automated Secrets Rotation &amp; Vaulting</text>
+  </g>
+
+  <path d="M 415 185 L 455 185" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Right: Audit & Forensic Stream -->
+  <g filter="url(#secShadow)">
+    <rect x="455" y="65" width="115" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="455" y="65" width="115" height="4" rx="2" fill="#0284C7"/>
+    <text x="512" y="90" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">AUDIT TRAILS</text>
+
+    <rect x="465" y="110" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="512" y="130" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Immutable Logs</text>
+    <text x="512" y="145" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Append-Only</text>
+
+    <rect x="465" y="165" width="95" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="512" y="185" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Anomaly Detection</text>
+    <text x="512" y="200" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">Real-time Alert</text>
+
+    <rect x="465" y="220" width="95" height="45" rx="4" fill="#ECFDF5"/>
+    <text x="512" y="240" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">100% Defense</text>
+    <text x="512" y="255" font-family="'Inter', sans-serif" font-size="8" fill="#059669" text-anchor="middle">Zero Compromise</text>
+  </g>
+
+  <rect x="165" y="15" width="270" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="31" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    CYBERSECURITY &amp; GOVERNANCE TOPOLOGY
+  </text>
+</svg>

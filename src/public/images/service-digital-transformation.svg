@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350" role="img" aria-labelledby="transTitle transDesc">
+  <title id="transTitle">Digital Transformation Architecture</title>
+  <desc id="transDesc">Legacy monolith decomposition, strangler fig proxying, event synchronization, and cloud core modernization.</desc>
+  <defs>
+    <linearGradient id="transBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="transShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="350" rx="10" fill="url(#transBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Left: Legacy Monolith Core -->
+  <g filter="url(#transShadow)">
+    <rect x="30" y="65" width="120" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="30" y="65" width="120" height="4" rx="2" fill="#D97706"/>
+    <text x="90" y="90" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">LEGACY CORE</text>
+
+    <rect x="40" y="110" width="100" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="130" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Monolith Mainframe</text>
+    <text x="90" y="145" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">COBOL / Batch</text>
+
+    <rect x="40" y="165" width="100" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="90" y="185" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Legacy DB Silos</text>
+    <text x="90" y="200" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">High Latency</text>
+
+    <rect x="40" y="220" width="100" height="45" rx="4" fill="#FFFBEB"/>
+    <text x="90" y="240" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#D97706" text-anchor="middle">Target for Decoupling</text>
+    <text x="90" y="255" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Zero Downtime</text>
+  </g>
+
+  <path d="M 150 185 L 190 185" stroke="#D97706" stroke-width="2" stroke-dasharray="3 3"/>
+
+  <!-- Center: Strangler Fig & Modernization Bridge -->
+  <g filter="url(#transShadow)">
+    <rect x="190" y="55" width="220" height="240" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="190" y="55" width="220" height="26" rx="8" fill="#F0F7FF"/>
+    <text x="300" y="73" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">STRANGLER FIG MODERNIZATION</text>
+
+    <rect x="205" y="95" width="190" height="50" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="300" y="117" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">Intelligent Traffic Interceptor</text>
+    <text x="300" y="132" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Canary Weighting • Zero Service Interruption</text>
+
+    <rect x="205" y="155" width="190" height="60" rx="6" fill="#F0F7FF" stroke="#0284C7"/>
+    <text x="300" y="177" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0284C7" text-anchor="middle">Bi-Directional Event Synchronization</text>
+    <text x="300" y="193" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Transactional Consistency &amp; Shadow Writes</text>
+    <text x="300" y="206" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#0052CC" text-anchor="middle">Continuous Parity Checks</text>
+
+    <rect x="205" y="225" width="190" height="55" rx="6" fill="#ECFDF5"/>
+    <text x="300" y="247" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">Gradual Domain Migration</text>
+    <text x="300" y="262" font-family="'Inter', sans-serif" font-size="8" fill="#059669" text-anchor="middle">Slice-by-Slice Risk Elimination</text>
+  </g>
+
+  <path d="M 410 185 L 450 185" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Right: Modern Cloud Core -->
+  <g filter="url(#transShadow)">
+    <rect x="450" y="65" width="120" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="450" y="65" width="120" height="4" rx="2" fill="#0052CC"/>
+    <text x="510" y="90" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F" text-anchor="middle">MODERN CLOUD</text>
+
+    <rect x="460" y="110" width="100" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="510" y="130" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Event Microservices</text>
+    <text x="510" y="145" font-family="'Inter', sans-serif" font-size="8" fill="#0052CC" text-anchor="middle">Kubernetes Native</text>
+
+    <rect x="460" y="165" width="100" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="510" y="185" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">Cloud Databases</text>
+    <text x="510" y="200" font-family="'Inter', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Distributed ACID</text>
+
+    <rect x="460" y="220" width="100" height="45" rx="4" fill="#ECFDF5"/>
+    <text x="510" y="240" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">50+ Migrations</text>
+    <text x="510" y="255" font-family="'Inter', sans-serif" font-size="8" fill="#059669" text-anchor="middle">100% On-Time</text>
+  </g>
+
+  <rect x="165" y="15" width="270" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="31" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    MODERNIZATION &amp; TRANSFORMATION BLUEPRINT
+  </text>
+</svg>

@@ -6,13 +6,15 @@ Nexora Digital Engineering is a production-oriented, AI-native B2B technology co
 
 ## Key Features
 - **Modern Enterprise Architecture:** Zero-daemon, lightweight, self-contained architecture running on Node.js with built-in native SQLite persistence and test harness.
-- **Full Showcase of B2B Services:**
+- **Key Capabilities & Practice Areas:**
   - AI & Data Engineering
   - Software Product Engineering
   - Cloud & Platform Engineering
   - Cybersecurity & Governance
   - Digital Transformation Consulting
   - Quality Engineering & Test Automation
+- **Executive Light-Mode Design System (SPEC-010):** Authoritative high-contrast aesthetic (WCAG AAA/AA), frosted sticky header, responsive drawer, 5 constitutional UI states, and bespoke SVG architectural diagrams.
+- **Passwordless Magic Link & Dual-Horizon Auth (SPEC-011 & ADR-006):** Cryptographic single-use magic links (SHA-256 tokens) with 72h absolute session cap and 24h idle sliding policy.
 - **Lead Generation & Contact Management:** Validated enquiry workflow with automated SLA categorization and database persistence.
 - **Protected Admin & Content Area:** Role-Based Access Control (RBAC), secure sessions, content draft/review/publish workflow, and lead export.
 - **Search & Filter Engine:** Instant keyword and topic search across services, case studies, and insights.
@@ -53,8 +55,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **[CLAUDE.md](CLAUDE.md):** Claude Code operational instructions and command harness.
 - **[AGENTS.md](AGENTS.md):** Multi-agent role matrix and tool boundary definitions.
 - **[Architecture Overview](docs/architecture/system-architecture.md):** C4 diagrams, container topology, and data flows.
-- **[Architecture Decision Records](docs/adr/):** Formal decision records (ADR-001 through ADR-005).
-- **[Specifications](specs/):** GitHub Spec Kit executable specifications (Specs 001 - 009).
+- **[Architecture Decision Records](docs/adr/):** Formal decision records (ADR-001 through ADR-006).
+- **[Specifications](specs/):** GitHub Spec Kit executable specifications (Specs 001 - 011).
 - **[Tasks & Plans](tasks/):** Traceable task breakdown and implementation plans.
 
 ---

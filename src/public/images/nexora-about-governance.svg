@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" width="620" height="440" role="img" aria-labelledby="govTitle govDesc">
+  <title id="govTitle">Nexora Global Governance &amp; Architecture Delivery Framework</title>
+  <desc id="govDesc">Visual representation of Global Delivery Hubs, ISO and SOC 2 verified compliance seals, and Architecture-First advisory governance.</desc>
+  <defs>
+    <linearGradient id="govBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="govShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="620" height="440" rx="12" fill="url(#govBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="620" height="48" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="20" y="14" width="14" height="14" rx="3" fill="#0052CC"/>
+  <text x="42" y="27" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800" fill="#0A192F" letter-spacing="0.05em">
+    GOVERNANCE &amp; DELIVERY ARCHITECTURE
+  </text>
+  <rect x="475" y="13" width="125" height="22" rx="11" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <circle cx="487" cy="24" r="3.5" fill="#16A34A"/>
+  <text x="496" y="28" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#15803D">
+    TIER-1 AUDITED
+  </text>
+
+  <!-- ================= SECTION 1: GLOBAL DELIVERY HUBS ================= -->
+  <g filter="url(#govShadow)">
+    <rect x="20" y="65" width="280" height="170" rx="8" fill="url(#cardGrad)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="20" y="65" width="280" height="32" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="32" y="86" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#0052CC" letter-spacing="0.04em">
+      GLOBAL DELIVERY MESH
+    </text>
+    <rect x="210" y="71" width="80" height="20" rx="4" fill="#EFF6FF"/>
+    <text x="250" y="85" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#0052CC" text-anchor="middle">
+      24/7 Follow-Sun
+    </text>
+
+    <!-- Hub 1: North America -->
+    <g filter="url(#badgeShadow)">
+      <rect x="32" y="107" width="256" height="36" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="48" cy="125" r="5" fill="#0052CC"/>
+      <text x="62" y="123" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F">North America &mdash; New York &amp; SF</text>
+      <text x="62" y="136" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Principal Architecture &amp; Financial Practice</text>
+    </g>
+
+    <!-- Hub 2: EMEA -->
+    <g filter="url(#badgeShadow)">
+      <rect x="32" y="150" width="256" height="36" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="48" cy="168" r="5" fill="#0284C7"/>
+      <text x="62" y="166" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F">EMEA &mdash; London &amp; Zurich</text>
+      <text x="62" y="179" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Regulatory Assurance, HIPAA &amp; Privacy</text>
+    </g>
+
+    <!-- Hub 3: APAC -->
+    <g filter="url(#badgeShadow)">
+      <rect x="32" y="193" width="256" height="36" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="48" cy="211" r="5" fill="#059669"/>
+      <text x="62" y="209" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F">APAC &mdash; Singapore &amp; Tokyo</text>
+      <text x="62" y="222" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">High-Concurrency Cloud Platforms &amp; IoT</text>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 2: COMPLIANCE & VERIFICATION ================= -->
+  <g filter="url(#govShadow)">
+    <rect x="320" y="65" width="280" height="170" rx="8" fill="url(#cardGrad)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="320" y="65" width="280" height="32" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="332" y="86" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#0052CC" letter-spacing="0.04em">
+      STANDARDS &amp; ATTESTATION
+    </text>
+    <rect x="510" y="71" width="80" height="20" rx="4" fill="#F0FDF4"/>
+    <text x="550" y="85" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#15803D" text-anchor="middle">
+      Continuous Audit
+    </text>
+
+    <!-- Seal 1: ISO 27001 -->
+    <g filter="url(#badgeShadow)">
+      <rect x="332" y="107" width="122" height="54" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="393" y="128" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#0052CC" text-anchor="middle">ISO 27001</text>
+      <text x="393" y="146" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">InfoSec Certified</text>
+    </g>
+
+    <!-- Seal 2: SOC 2 Type II -->
+    <g filter="url(#badgeShadow)">
+      <rect x="466" y="107" width="122" height="54" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="527" y="128" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#0052CC" text-anchor="middle">SOC 2 Type II</text>
+      <text x="527" y="146" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">Security &amp; Privacy</text>
+    </g>
+
+    <!-- Seal 3: HIPAA / HL7 -->
+    <g filter="url(#badgeShadow)">
+      <rect x="332" y="169" width="122" height="54" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="393" y="190" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#0052CC" text-anchor="middle">HIPAA / HL7</text>
+      <text x="393" y="208" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">Safe-Harbor Enclaves</text>
+    </g>
+
+    <!-- Seal 4: PCI-DSS / ISO 20022 -->
+    <g filter="url(#badgeShadow)">
+      <rect x="466" y="169" width="122" height="54" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="527" y="190" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#0052CC" text-anchor="middle">PCI-DSS v4</text>
+      <text x="527" y="208" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle">Level 1 Payment Core</text>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 3: ARCHITECTURE-FIRST ADVISORY ================= -->
+  <g filter="url(#govShadow)">
+    <rect x="20" y="248" width="580" height="142" rx="8" fill="url(#cardGrad)" stroke="#BAE6FD" stroke-width="1.5"/>
+    <rect x="20" y="248" width="580" height="32" rx="8" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+    <text x="32" y="269" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#0052CC" letter-spacing="0.04em">
+      ARCHITECTURE-FIRST ADVISORY DISCIPLINE
+    </text>
+    <rect x="480" y="254" width="110" height="20" rx="4" fill="#EFF6FF"/>
+    <text x="535" y="268" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#0052CC" text-anchor="middle">
+      Dual-Layer Verification
+    </text>
+
+    <!-- 3 Stage Flow -->
+    <!-- Stage 1 -->
+    <g filter="url(#badgeShadow)">
+      <rect x="32" y="290" width="170" height="88" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="40" y="298" width="22" height="22" rx="4" fill="#F0F7FF"/>
+      <text x="51" y="313" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#0052CC" text-anchor="middle">1</text>
+      <text x="68" y="313" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F">Boundary Spec</text>
+      <text x="40" y="334" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Constitutional Invariants,</text>
+      <text x="40" y="347" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Type Contracts &amp; Threat Model</text>
+      <rect x="40" y="356" width="154" height="14" rx="3" fill="#F8FAFC"/>
+      <text x="117" y="367" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#0052CC" text-anchor="middle">Zero Ambiguity Gate</text>
+    </g>
+
+    <!-- Arrow 1-2 -->
+    <path d="M 207 334 L 221 334" stroke="#0052CC" stroke-width="2" stroke-dasharray="3 2"/>
+    <polygon points="221,330 227,334 221,338" fill="#0052CC"/>
+
+    <!-- Stage 2 -->
+    <g filter="url(#badgeShadow)">
+      <rect x="231" y="290" width="170" height="88" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="239" y="298" width="22" height="22" rx="4" fill="#F0F7FF"/>
+      <text x="250" y="313" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#0052CC" text-anchor="middle">2</text>
+      <text x="267" y="313" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F">Deterministic Build</text>
+      <text x="239" y="334" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Adversarial Test Suites,</text>
+      <text x="239" y="347" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Chaos Harness &amp; mTLS Mesh</text>
+      <rect x="239" y="356" width="154" height="14" rx="3" fill="#F8FAFC"/>
+      <text x="316" y="367" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#0284C7" text-anchor="middle">100% Automated Verify</text>
+    </g>
+
+    <!-- Arrow 2-3 -->
+    <path d="M 406 334 L 420 334" stroke="#0052CC" stroke-width="2" stroke-dasharray="3 2"/>
+    <polygon points="420,330 426,334 420,338" fill="#0052CC"/>
+
+    <!-- Stage 3 -->
+    <g filter="url(#badgeShadow)">
+      <rect x="430" y="290" width="160" height="88" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="438" y="298" width="22" height="22" rx="4" fill="#ECFDF5"/>
+      <text x="449" y="313" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#059669" text-anchor="middle">3</text>
+      <text x="466" y="313" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0A192F">Executive Gate</text>
+      <text x="438" y="334" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Principal Sign-off, SOC2</text>
+      <text x="438" y="347" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#64748B">Audit Lock &amp; Production Cut</text>
+      <rect x="438" y="356" width="144" height="14" rx="3" fill="#F0FDF4"/>
+      <text x="510" y="367" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">&#10003; Zero-Debt Cutover</text>
+    </g>
+  </g>
+
+  <!-- Footer Tag -->
+  <text x="310" y="415" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748B" text-anchor="middle">
+    Nexora Digital Engineering Architecture Advisory Board &bull; Governed Governance Topology
+  </text>
+</svg>

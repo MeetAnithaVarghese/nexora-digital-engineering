@@ -36,7 +36,33 @@ function generateSitemapXml() {
     lastmod: a.published_at ? a.published_at.split('T')[0] : now
   }));
 
-  const allUrls = [...staticRoutes, ...serviceRoutes, ...articleRoutes];
+  // Dynamic Case Study routes
+  const caseStudies = db.prepare('SELECT slug, published_at FROM case_studies').all();
+  const caseStudyRoutes = caseStudies.map(cs => ({
+    loc: `${baseUrl}/case-studies/${cs.slug}`,
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: cs.published_at ? cs.published_at.split('T')[0] : now
+  }));
+
+  // Dynamic Industry Domain routes
+  const industrySlugs = [
+    'financial-services',
+    'healthcare',
+    'manufacturing-iot',
+    'retail-commerce',
+    'healthcare-life-sciences',
+    'smart-manufacturing-iot',
+    'retail-digital-commerce'
+  ];
+  const industryRoutes = industrySlugs.map(slug => ({
+    loc: `${baseUrl}/industries/${slug}`,
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: now
+  }));
+
+  const allUrls = [...staticRoutes, ...serviceRoutes, ...caseStudyRoutes, ...industryRoutes, ...articleRoutes];
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';

@@ -14,7 +14,19 @@ CREATE TABLE IF NOT EXISTS sessions (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   token TEXT UNIQUE NOT NULL,
+  last_active_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   expires_at DATETIME NOT NULL,
+  max_expires_at DATETIME NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS magic_link_tokens (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  token_hash TEXT UNIQUE NOT NULL,
+  expires_at DATETIME NOT NULL,
+  used_at DATETIME,
+  ip_address TEXT,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -84,4 +96,5 @@ CREATE INDEX IF NOT EXISTS idx_articles_slug ON articles(slug);
 CREATE INDEX IF NOT EXISTS idx_services_slug ON services(slug);
 CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status);
 CREATE INDEX IF NOT EXISTS idx_sessions_token ON sessions(token);
+CREATE INDEX IF NOT EXISTS idx_magic_link_tokens_hash ON magic_link_tokens(token_hash);
 

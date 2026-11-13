@@ -1,44 +1,69 @@
 // Admin Portal & CMS Dashboard Views
 const { renderLayout, escapeHtml } = require('./layout');
 
-function renderLoginPage(errorMessage = null) {
+function renderLoginPage(errorMessage = null, successMessage = null) {
   const bodyContent = `
     <section class="section">
       <div class="container">
-        <div class="form-container" style="max-width: 450px;">
-          <div class="section-tag" style="text-align: center;">STAFF ACCESS</div>
-          <h1 class="card-title" style="text-align: center; margin-bottom: 1.5rem;">Admin & CMS Portal</h1>
+        <div class="form-container" style="max-width: 480px;">
+          <div class="section-tag" style="text-align: center;">PORTAL ACCESS</div>
+          <h1 class="card-title" style="text-align: center; margin-bottom: 0.5rem;">Client &amp; Staff Portal</h1>
+          <p style="text-align: center; color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 2rem;">
+            Sign in with a secure one-time email link. A single-use authentication link will be delivered to your authorized address.
+          </p>
 
           ${errorMessage ? `
-            <div class="form-status error" style="display: block;">
+            <div class="form-status error" style="display: block; margin-bottom: 1.5rem;">
               ${escapeHtml(errorMessage)}
             </div>
           ` : ''}
 
-          <form method="POST" action="/api/auth/login">
-            <div class="form-group">
-              <label class="form-label" for="email">Admin Email</label>
-              <input type="email" id="email" name="email" class="form-input" required placeholder="admin@nexora.example.com">
+          ${successMessage ? `
+            <div class="form-status success" style="display: block; margin-bottom: 1.5rem;">
+              ${escapeHtml(successMessage)}
             </div>
+          ` : ''}
 
+          <!-- Primary: Secure One-Time Email Link Sign-In -->
+          <form method="POST" action="/api/auth/magic-link" id="magicLinkForm">
             <div class="form-group">
-              <label class="form-label" for="password">Password</label>
-              <input type="password" id="password" name="password" class="form-input" required placeholder="••••••••••••">
+              <label class="form-label" for="email">Authorized Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="name@enterprise.example">
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">
-              Authenticate Session
+              Send Secure Sign-In Link &rarr;
             </button>
           </form>
 
-          <p style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-dim);">
-            Protected by Session-Based PBKDF2 Authentication & RBAC.
+          <!-- Secondary / Legacy Password Authentication -->
+          <details style="margin-top: 2rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+            <summary style="font-size: 0.85rem; color: var(--color-text-dim); cursor: pointer; text-align: center;">
+              Alternative: Sign in with Password
+            </summary>
+            <form method="POST" action="/api/auth/login" style="margin-top: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="pwdEmail">Email Address</label>
+                <input type="email" id="pwdEmail" name="email" class="form-input" required placeholder="admin@nexora.example.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-input" required placeholder="••••••••••••">
+              </div>
+              <button type="submit" class="btn btn-outline btn-sm" style="width: 100%;">
+                Authenticate with Password
+              </button>
+            </form>
+          </details>
+
+          <p style="text-align: center; margin-top: 1.5rem; font-size: 0.8rem; color: var(--color-text-dim);">
+            Protected by encrypted single-use tokens and active session timeouts.
           </p>
         </div>
       </div>
     </section>
   `;
-  return renderLayout({ title: 'Admin Login', activeNav: 'admin', bodyContent });
+  return renderLayout({ title: 'Portal Login', activeNav: 'admin', bodyContent });
 }
 
 function renderAdminDashboard(user, leads = [], articles = []) {

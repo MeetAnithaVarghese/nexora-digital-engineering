@@ -1,7 +1,12 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const { resetDbForTesting } = require('../../src/db');
 const { createLead, resetRateLimiterForTesting } = require('../../src/server/lead');
 const { validateLeadSubmission } = require('../../src/server/validation');
+
+test.before(() => {
+  resetDbForTesting(':memory:');
+});
 
 test('Adversarial: completely empty or null payload is rejected cleanly', () => {
   const resultNull = validateLeadSubmission(null);

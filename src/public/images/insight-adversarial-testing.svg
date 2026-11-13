@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-labelledby="advTitle advDesc">
+  <title id="advTitle">Adversarial Testing in Continuous Delivery Pipeline</title>
+  <desc id="advDesc">Automated fuzzing, schema boundary checking, chaos engineering, and privilege escalation verification in CI/CD.</desc>
+  <defs>
+    <linearGradient id="advBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="advShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="320" rx="10" fill="url(#advBg)" stroke="#E2E8F0" stroke-width="1"/>
+
+  <rect x="150" y="14" width="300" height="24" rx="12" fill="#EBF3FF"/>
+  <text x="300" y="30" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0052CC" text-anchor="middle">
+    ADVERSARIAL VERIFICATION &amp; CHAOS PIPELINE
+  </text>
+
+  <!-- Stage 1: Build & Static Audit -->
+  <g filter="url(#advShadow)">
+    <rect x="25" y="65" width="125" height="225" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="25" y="65" width="125" height="4" rx="2" fill="#0052CC"/>
+    <text x="87" y="90" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">SHIFT-LEFT GATES</text>
+
+    <rect x="35" y="105" width="105" height="40" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="87" y="122" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">Property-Based Fuzz</text>
+    <text x="87" y="136" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">100k Pseudo Inputs</text>
+
+    <rect x="35" y="155" width="105" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="87" y="172" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Boundary Probes</text>
+    <text x="87" y="186" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Buffer &amp; Format Overflow</text>
+
+    <rect x="35" y="205" width="105" height="40" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="87" y="222" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">Static Taint Scan</text>
+    <text x="87" y="236" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">Semgrep / CodeQL AST</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 150 175 L 185 175" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Stage 2: Dynamic Chaos & Security Engine -->
+  <g filter="url(#advShadow)">
+    <rect x="185" y="55" width="230" height="245" rx="8" fill="#FFFFFF" stroke="#0052CC" stroke-width="1.5"/>
+    <rect x="185" y="55" width="230" height="28" rx="8" fill="#F0F7FF"/>
+    <text x="300" y="74" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0052CC" text-anchor="middle">ACTIVE ADVERSARIAL HARNESS</text>
+
+    <rect x="200" y="95" width="200" height="45" rx="4" fill="#FEF3C7" stroke="#FDE68A"/>
+    <text x="300" y="114" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#D97706" text-anchor="middle">Privilege Escalation Attacks</text>
+    <text x="300" y="129" font-family="'Inter', sans-serif" font-size="8" fill="#B45309" text-anchor="middle">Automated Role Matrix Traversal • Zero Leakage</text>
+
+    <rect x="200" y="150" width="200" height="45" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="300" y="169" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Fault &amp; Chaos Injection</text>
+    <text x="300" y="184" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Packet Loss, Disk Latency &amp; Node Kill Loops</text>
+
+    <rect x="200" y="205" width="200" height="45" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="300" y="224" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0284C7" text-anchor="middle">Concurrency Race Scenarios</text>
+    <text x="300" y="239" font-family="'Inter', sans-serif" font-size="8" fill="#0369A1" text-anchor="middle">Thread Interleaving &amp; Double-Spend Simulation</text>
+
+    <rect x="200" y="260" width="200" height="26" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="300" y="277" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#059669" text-anchor="middle">Dual Verification: Formal Proof Checkers</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 415 175 L 450 175" stroke="#0052CC" stroke-width="2"/>
+
+  <!-- Stage 3: Sovereign Production Gate -->
+  <g filter="url(#advShadow)">
+    <rect x="450" y="65" width="125" height="225" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="450" y="65" width="125" height="4" rx="2" fill="#059669"/>
+    <text x="512" y="90" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0A192F" text-anchor="middle">RELEASE GATE</text>
+
+    <rect x="460" y="105" width="105" height="40" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="512" y="122" font-family="'Inter', sans-serif" font-size="9" font-weight="800" fill="#059669" text-anchor="middle">Zero Regressions</text>
+    <text x="512" y="136" font-family="'Inter', sans-serif" font-size="8" fill="#047857" text-anchor="middle">Deterministic PASS</text>
+
+    <rect x="460" y="155" width="105" height="40" rx="4" fill="#F0F7FF" stroke="#BAE6FD"/>
+    <text x="512" y="172" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0052CC" text-anchor="middle">Signed SBOM</text>
+    <text x="512" y="186" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Cosign Attestation</text>
+
+    <rect x="460" y="205" width="105" height="40" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="512" y="222" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#0A192F" text-anchor="middle">Canary Deploy</text>
+    <text x="512" y="236" font-family="'Inter', sans-serif" font-size="8" fill="#475569" text-anchor="middle">Automated Rollback</text>
+  </g>
+</svg>
+
